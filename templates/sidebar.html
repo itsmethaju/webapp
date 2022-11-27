@@ -1,0 +1,17 @@
+{% load static %}
+<header class="main-header">
+    <a href="/" class="logo-holder ajax"><img src="{% static 'images/logo.png' %}" alt=""></a>
+    <!-- nav-button-wrap-->
+    <div class="nav-button but-hol">
+        <span  class="nos"></span>
+        <span class="ncs"></span>
+        <span class="nbs"></span>
+        <div class="menu-button-text">Menu</div>
+    </div>
+    <!-- nav-button-wrap end-->
+   
+    <div class="folio-btn">
+        <a class="folio-btn-item ajax" href="{% url 'prot' %}"></a>
+        <span class="folio-btn-tooltip">My Portfolio</span>
+    </div>
+</header>

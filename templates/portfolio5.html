@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!--loader end-->
+        <!-- Main  -->
+        <div id="main">
+            <!-- header-->
+            {% include 'sidebar.html' %}
+           
+            <!-- header end -->
+            <!-- wrapper -->
+            <div id="wrapper">
+                <!-- content-holder  -->	
+                <div class="content-holder scroll-content" data-pagetitle="Portofolio boxed">
+                    <!-- nav-holder-->
+                    {% include 'navholder.html' %}
+                    <div class="nav-holder-dec color-bg"></div>
+                    <div class="nav-overlay"></div>
+                    <!-- nav-holder end -->  
+                    <!--content -->
+                    <div class="content">
+                        <!-- section  --> 
+                        <section class="header-section hidden-section" data-scrollax-parent="true">
+                            <div class="bg par-elem"  data-bg="{% static 'images/bg/1.jpg' %}" data-scrollax="properties: { translateY: '30%' }"></div>
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="single-page-title hiddec-anim fl-wrap">
+                                    <h1>My Portfolio</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                </div>
+                                <div class="hero-corner"></div>
+                                <div class="scroll-down-wrap hiddec-anim">
+                                    <div class="mousey">
+                                        <div class="scroller"></div>
+                                    </div>
+                                    <span>Scroll down  to discover</span>
+                                </div>
+                            </div>
+                            <div class="fcw-dec"></div>
+                        </section>
+                        <!-- section end --> 
+                        <!-- section --> 
+                        <section class="no-bottom-padding">
+                            <div class="col-wc_dec"></div>
+                            <div class="container">
+                                <div class="inline-folio-filters fl-wrap hiddec-anim">
+                                    <div class="fixed-filter-panel_title color-bg">
+                                        Works Filter <i class="fal fa-long-arrow-right"></i>
+                                    </div>
+                                    <div class="gallery-filters inline-dark-filters">
+                                        <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All projects</a>
+                                        <a href="#" class="gallery-filter" data-filter=".web">Web Design</a>
+                                        <a href="#" class="gallery-filter" data-filter=".photography">Photo</a>
+                                        <a href="#" class="gallery-filter" data-filter=".branding">Branding</a>
+                                        <a href="#" class="gallery-filter" data-filter=".uides">Ui Design</a>
+                                    </div>
+                                    <div class="folio-counter">
+                                        <div class="num-album"></div>
+                                        <div class="all-album"></div>
+                                    </div>
+                                </div>
+                                <!-- portfolio start -->
+                                <div class="gallery-items min-pad     fl-wrap  hiddec-anim">
+                                    <!-- gallery-item-->
+                                    {% for  i in protfolio %}
+                                    <div class="gallery-item  web branding">
+                                        <div class="grid-item-holder hov_zoom">
+                                            <img  src="{{i.img.url}}"    alt="">
+                                            <a href="{{i.img.url}}" class="box-media-zoom   image-popup"><i class="fal fa-search"></i></a>
+                                            <div class="grid-det">
+                                                <div class="grid-det_category"><a href="#">{{i.project_domain}} </a> <a href="#"></a></div>
+                                                <div class="grid-det-item">
+                                                    <a href="{% url 'prot_detial' i.id %}" class="ajax grid-det_link">{{i.project_titel}}<i class="fal fa-long-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pr-bg"></div>
+                                    </div>
+                                    {% endfor %}
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                   
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                   
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                   
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                    
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                    
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                    
+                                    <!-- gallery-item end-->
+                                    <!-- gallery-item-->
+                                   
+                                    <!-- gallery-item end--> 
+                                    <!-- gallery-item-->
+                                    
+                                    <!-- gallery-item end--> 									
+                                </div>
+                                <!-- portfolio end -->
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="order-wrap  hiddec-anim fl-wrap">
+                                <div class="container">
+                                    <div class="order-wrap-container fl-wrap">
+                                        <div class="pr-bg pr-bg-white"></div>
+                                        <h4>Ready to order Your Project ? </h4>
+                                        <a href="contacts.html" class="ajax btn color-bg">Get In Touch</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sec-lines"></div>
+                            <div class="col-wc_dec col-wc_dec2 col-wc_dec3"></div>
+                        </section>
+                    </div>
+                    <!--content  end -->
+                    {% endblock %}

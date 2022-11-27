@@ -1,0 +1,69 @@
+{% load static %}
+<div class="nav-holder but-hol">
+    <div class="nav-scroll-bar-wrap fl-wrap">
+        <a href="index.html" class="ajax logo_menu"><img src="{% static 'images/logo2.png' %}" alt=""></a>
+        <div class="nav-container fl-wrap">
+            <!-- nav -->
+            <nav class="nav-inner" id="menu">
+                <ul>
+                    <li>
+                        <a href="#" class="act-link">Home</a>
+                        <!--level 2 -->
+                        <ul>
+                            <li><a href="index.html" class="ajax">Slider</a></li>
+                            <li><a href="index2.html" class="ajax">Carousel</a></li>
+                            <li><a href="index3.html" class="ajax">Impulse Image</a></li>
+                            <li><a href="index4.html" class="ajax">Slideshow</a></li>
+                            <li><a href="index5.html" class="ajax">Video</a></li>
+                            <li><a href="index6.html" class="ajax">Parallax Image</a></li>
+                        </ul>
+                        <!--level 2 end -->
+                    </li>
+                    <li>
+                        <a href="{% url 'prot' %}">Portfolio</a>
+                        <!--level 2 -->
+                        <ul>
+                            <li><a href="portfolio.html" class="ajax">Fullscreen Grid</a></li>
+                            <li><a href="portfolio3.html" class="ajax">Fullscreen Grid 2</a></li>
+                            <li><a href="portfolio2.html" class="ajax">Column Grid</a></li>
+                            <li><a href="portfolio4.html" class="ajax">Column Grid 2</a></li>
+                            <li><a href="portfolio5.html" class="ajax">Boxed Grid</a></li>
+                            <li>
+                                <a href="#">Single</a>
+                                <!--level 3 -->
+                                <ul>
+                                    <li><a href="portfolio-single.html" class="ajax">Style 1</a></li>
+                                    <li><a href="portfolio-single2.html" class="ajax">Style 2</a></li>
+                                    <li><a href="portfolio-single3.html" class="ajax">Style 3</a></li>
+                                    <li><a href="portfolio-single4.html" class="ajax">Style 4</a></li>
+                                    <li><a href="portfolio-single5.html" class="ajax">Style 5</a></li>
+                                    <li><a href="portfolio-single6.html" class="ajax">Style 6</a></li>
+                                </ul>
+                                <!--level 3 end -->
+                            </li>
+                        </ul>
+                        <!--level 2 end -->
+                    </li>
+                    <li><a href="{% url 'contact' %}" class="ajax">Contacts</a></li>
+                    <li><a href="{% url 'blog' %}" class="ajax">Blog</a></li>
+                    <li>
+                        <a href="#">Pages</a>
+                        <!--level 2 -->
+                        <ul>
+                            <li><a href="{% url 'team' %}" class="ajax">Team</a></li>
+                            <li><a href="blog-single.html" class="ajax">Blog Single</a></li>
+                            <li><a href="404.html" class="ajax">404</a></li>
+                        </ul>
+                        <!--level 2 end -->
+                    </li>
+                </ul>
+            </nav>
+            <!-- nav end-->
+        </div>
+    </div>
+    <div class="share-wrapper">
+        <span class="share-title">Share : </span>
+        <div class="share-container"></div>
+    </div>
+    <div class="nav-holder-line"></div>
+</div>

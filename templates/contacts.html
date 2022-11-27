@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Main  -->
+        <div id="main">
+            <!-- header-->
+            {% include 'sidebar.html' %}
+            <!-- header end -->
+            <!-- wrapper -->
+            <div id="wrapper">
+                <!-- content-holder  -->	
+                <div class="content-holder scroll-content" data-pagetitle="Contacts">
+                    <!-- nav-holder-->
+                    {% include 'navholder.html' %}
+                    <div class="nav-holder-dec color-bg"></div>
+                    <div class="nav-overlay"></div>
+                    <!-- nav-holder end -->         
+                    <!-- fixed-column-wrap -->       
+                    <div class="fixed-column-wrap">
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar color-bg"></div>
+                        </div>
+                        <div class="column-image fl-wrap full-height">
+                            <div class="bg"  data-bg="{% static 'images/bg/long/1.jpg' %}"></div>
+                            <div class="overlay"></div>
+                            <div class="column-image-anim"></div>
+                        </div>
+                        <div class="fcw-dec"></div>
+                        <div class="fixed-column-tilte fcw-title"><span>Contacts</span></div>
+                    </div>
+                    <!-- fixed-column-wrap end -->
+                    <!-- column-wrap -->
+                    <div class="column-wrap  ">
+                        <!--content -->
+                        <div class="content">
+                            <!-- fixed-top-panel -->
+                            <div class="fixed-top-panel fl-wrap">
+                                <div class="sp-fix-header fl-wrap">
+                                    <div class="scroll-down-wrap">
+                                        <div class="mousey">
+                                            <div class="scroller"></div>
+                                        </div>
+                                        <span>Scroll down  to discover</span>
+                                    </div>
+                                    <a href="/" class="ajax back-to-home-btn"><span>Back to home</span></a>
+                                </div>
+                            </div>
+                            <!-- fixed-top-panel end -->
+                            <!--section -->
+                            <section   class="hidden-section bot-element">
+                                <div class="col-wc_dec"></div>
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>Contact details</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <!--process-wrap  -->
+                                    <div class="contacts-wrap fl-wrap">
+                                        <ul>
+                                            <li>
+                                                <i class="fal fa-mobile-android"></i>
+                                                <h4>Phone Number</h4>
+                                                <div class="clearfix"></div>
+                                                <a href="#" class="contact-link">+489756412322</a>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-compass"></i>
+                                                <h4>Office Location</h4>
+                                                <div class="clearfix"></div>
+                                                <a href="#" class="contact-link">USA 27TH Brooklyn NY</a>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-envelope-open"></i>
+                                                <h4>My e-mail</h4>
+                                                <div class="clearfix"></div>
+                                                <a href="#" class="contact-link">yourmail@domain.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--process-wrap   end-->       
+                                    <div class="map-container fl-wrap">
+                                        <div id="map-single" class="map" data-latlog="[40.714 , -74.005]" data-popuptext="My Location in New York ."></div>
+                                    </div>
+                                    <div class="sec-number">01.</div>
+                                </div>
+                            </section>
+                            <!--section end -->
+                            <div class="section-separator"><span class="fl-wrap bot-element"></span></div>
+                            <!--section-->
+                            <section   class="hidden-section bot-element">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                <h3>Get in Touch </h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div id="contact-form" class="cf-wrap">
+                                        <div id="message"></div>
+                                        <form method="post" class="custom-form" action="{% url 'contact' %}"  >
+                                            {% csrf_token %}
+                                            <fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label><i class="fal fa-user"></i></label>
+                                                        <input type="text" name="name" id="name" placeholder="Your Name *" />
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label><i class="fal fa-envelope"></i> </label>
+                                                        <input type="email"  name="email" id="email" placeholder="Email Address *"/>
+                                                    </div>
+                                                </div>
+                                                <textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                                                <div class="clearfix"></div>
+                                                <button type="submit" name="send" class="btn   color-bg" id="submit">Send Message</button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div class="sec-number">02.</div>
+                                </div>
+                                <div class="col-wc_dec col-wc_dec2 col-wc_dec3"></div>
+                            </section>
+                            <!--section end -->
+                            <div class="limit-box fl-wrap"></div>
+                        </div>
+                    </div>
+                    <!--content  end -->
+                    {% endblock %}

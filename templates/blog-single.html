@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Main  -->
+        <div id="main">
+            <!-- header-->
+            {% include 'sidebar.html' %}
+            <!-- header end -->
+            <!-- wrapper -->
+            <div id="wrapper">
+                <!-- content-holder  -->	
+                <div class="content-holder scroll-content" data-pagetitle="post single">
+                    <!-- nav-holder-->
+                    {% include 'navholder.html' %}
+                    <div class="nav-holder-dec color-bg"></div>
+                    <div class="nav-overlay"></div>
+                    <!-- nav-holder end -->           
+                    <!-- fixed-column-wrap -->       
+                    <div class="fixed-column-wrap">
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar color-bg"></div>
+                        </div>
+                        <div class="column-image fl-wrap full-height">
+                            <div class="bg"  data-bg="images/bg/long/1.jpg"></div>
+                            <div class="overlay"></div>
+                            <div class="column-image-anim"></div>
+                        </div>
+                        <div class="fcw-dec"></div>
+                        <div class="fixed-column-tilte fcw-title"><span>Last News</span></div>
+                    </div>
+                    <!-- fixed-column-wrap end -->
+                    <!-- column-wrap -->
+                    <div class="column-wrap  ">
+                        <!--content -->
+                        <div class="content">
+                            <!-- fixed-top-panel -->
+                            <div class="fixed-top-panel fl-wrap">
+                                <div class="sp-fix-header fl-wrap">
+                                    <div class="scroll-down-wrap hide_onmobile">
+                                        <div class="mousey">
+                                            <div class="scroller"></div>
+                                        </div>
+                                        <span>Scroll down  to discover</span>
+                                    </div>
+                                    <div class="search-btn"><i class="fal fa-search"></i><span>Search</span></div>
+                                    <!-- filter tag   -->
+                                    <div class="tag-filter blog-btn-filter">
+                                        <div class="blog-btn">Tags <i class="fa fa-tags" aria-hidden="true"></i></div>
+                                        <ul>
+                                            {% for i in tages %}
+                                            <li><a href="#">{{i.name}}</a></li>
+                                            {% endfor %}
+                            
+                                        </ul>
+                                    </div>
+                                    <!-- filter tag end  -->
+                                    <!-- filter category    -->
+                                    <div class="category-filter blog-btn-filter">
+                                        <div class="blog-btn">Categories <i class="fa fa-list-ul" aria-hidden="true"></i></div>
+                                        <ul>
+                                            {% for i in cat %}
+                                            <li><a href="#">{{i.name}}</a></li>
+                                            {% endfor %}
+
+                                        </ul>
+                                    </div>
+                                    <!-- filter category end  --> 
+                                </div>
+                                <div class="blog-search-wrap"><input name="se" id="se" type="text" class="search" placeholder="Type and click Enter to search.." value="" /></div>
+                            </div>
+                            <!-- fixed-top-panel end -->
+                            <!--section -->
+                            <section   class="hidden-section bot-element">
+                                <div class="col-wc_dec"></div>
+                                <div class="container">
+                                    <div class="section-title fl-wrap post-title">
+                                        <h3>{{blog.titel}}</h3>
+                                        <div class="post-header"> <a href="#">{{blog.date}}</a><span>Category : </span><a href="#">{{blog.category}}</a> <a href="#">Video</a> </div>
+                                    </div>
+                                    <!-- media-wrap-->
+                                    <div class="media-wrap  lightgallery  fl-wrap">
+                                        <div class="single-slider-wrap">
+                                            <div class="single-slider fl-wrap">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper lightgallery">
+                                                        {% for i in blog.blog_image_set.all %}
+                                                        <div class="swiper-slide hov_zoom"><img src="{{i.img.url}}" alt=""><a href="{{i.img.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                                        {% endfor %}
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="ss-slider-cont ss-slider-cont-prev  "><i class="fal fa-long-arrow-left"></i></div>
+                                                <div class="ss-slider-cont ss-slider-cont-next  "><i class="fal fa-long-arrow-right"></i></div>
+                                                <div class="ss-slider-controls">
+                                                    <div class="ss-slider-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- media-wrap end --> 
+                                    <div class="post-block fl-wrap">
+                                        <div class="post-opt fl-wrap">
+                                            <ul>
+                                                <li><a href="#"><i class="fal fa-user"></i> {{blog.author_name}}</a></li>
+                                                <li><a href="#"><i class="fal fa-comments-alt"></i> 12 comments</a></li>
+                                                <li><span><i class="fal fa-eye"></i> 123 view</span></li>
+                                            </ul>
+                                        </div>
+                                        <p>{{blog.desc}}
+                                        </p>
+                                        <blockquote>
+                                            <p> {{blog.quotes}}</p>
+                                        </blockquote>
+                                        <p>
+                                        </p>
+                                        <p>Quisque varius eros ac purus dignissim.
+                                            Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.
+                                        </p>
+                                    </div>
+                                    <!-- post-author-->                                   
+                                    <div class="post-author">
+                                        <div class="author-img">
+                                            <img alt='' src="{{blog.author_img.url}}">	
+                                        </div>
+                                        <div class="author-content">
+                                            <h5><a href="#">{{blog.author_name}}</a></h5>
+                                            <p>{{blog.comment_word}}</p>
+                                            <div class="author-social">
+                                                <ul>
+                                                    <li><a href="{{blog.fb_link}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="{{blog.inst_link}}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                    <li><a href="{{blog.twt_link}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="{{blog.link}}" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--post-author end-->                        
+                                    <div id="comments" class="single-post-comm">
+                                        <!--title-->
+                                        <h6 id="comments-title">Comments<span>( 2 )</span></h6>
+                                        <ul class="commentlist clearafix">
+                                            <li class="comment">
+                                                <div class="comment-body">
+                                                    <div class="comment-author">
+                                                        <img alt='' src='images/team/2.jpg' width="50" height="50">
+                                                    </div>
+                                                    <cite class="fn"><a href="#">Kevin</a></cite>
+                                                    <div class="comment-meta">
+                                                        <h6><a href="#">January 02, 2014 at 07:39 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <!--comment body-->
+                                                <div class="comment-body">
+                                                    <div class="comment-author">
+                                                        <img alt='' src='images/team/2.jpg' width="50" height="50">
+                                                    </div>
+                                                    <cite class="fn"><a href="#">Andy</a></cite>
+                                                    <div class="comment-meta">
+                                                        <h6><a href="#">January 22, 2014 at 03:19 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <div id="respond" class="clearafix">
+                                            <h6 id="reply-title">Leave A Review</h6>
+                                            <div class="comment-reply-form clearfix">
+                                                <form id="add-comment" class="add-comment custom-form">
+                                                    <fieldset>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label><i class="fal fa-user"></i></label>
+                                                                <input type="text" placeholder="Your Name *" value=""/>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label><i class="fal fa-envelope-open"></i></label>
+                                                                <input type="text" placeholder="Email Address*" value=""/>
+                                                            </div>
+                                                        </div>
+                                                        <textarea cols="40" rows="3" placeholder="Your Comment:"></textarea>
+                                                    </fieldset>
+                                                    <button class="btn  color-bg">Submit Comment</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--end respond-->
+                                    </div>
+                                    <!--comments end -->   
+                                    <!--content-nav_holder-->            
+                                    <div class="content-nav_holder fl-wrap blog-nav">
+                                        <div class="pr-bg pr-bg-white"></div>
+                                        <div class="content-nav">
+                                            <ul>
+                                                <li>
+                                                    <a href="/" class="ln ajax"><i class="fal fa-long-arrow-left"></i><span>Back to home</span></a>
+                                                    <div class="content-nav-media">
+                                                        <div class="bg"  data-bg="images/bg/1.jpg"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="{5url 'blog' %}" class="rn ajax"><span >Back to Blog</span> <i class="fal fa-long-arrow-right"></i></a>
+                                                    <div class="content-nav-media">
+                                                        <div class="bg"  data-bg="images/bg/1.jpg"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--content-nav_holder end -->                                          
+                                    <div class="sec-number">01.</div>
+                                </div>
+                                <div class="col-wc_dec col-wc_dec2 col-wc_dec3"></div>
+                            </section>
+                            <!--section end -->  
+                            <div class="limit-box fl-wrap"></div>
+                        </div>
+                    </div>
+                    <!--content  end -->
+                   {% endblock %}

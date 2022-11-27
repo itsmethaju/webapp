@@ -1,0 +1,22 @@
+{% load static %}
+<div class="page-scroll-nav fl-wrap">
+    <nav class="scroll-init color2-bg">
+        <ul class="no-list-style">
+            <li><a class="scroll-link fbgs" href="#sec2" data-bgscr="{% static 'images/bg/cropped-santorin-videographers.jpg' %}" data-bgtex="about"><span>Home</span></a></li>
+            <li><a class="scroll-link fbgs" href="#sec3" data-bgscr="{% static 'images/bg/long/1.jpg' %}" data-bgtex="services"><span>purchase</span></a></li>
+            	<li><a class="scroll-link fbgs" href="#sec6" data-bgscr="{% static 'images/bg/long/1.jpg' %}" data-bgtex="clients"><span>Clients</span></a></li>
+   	{% if user.is_authenticated %}
+   	<li><a  href="/" data-bgscr="{% static 'images/bg/long/1.jpg' %}" ><span>Welcome {{user.username}}</span></a></li>
+     	<li><a  href="{% url 'user_logout' %}" data-bgscr="{% static 'images/bg/long/1.jpg' %}" ><span>Logout</span></a></li>
+     	{% else %}
+     	     	<li><a  href="{% url 'user_register' %}" data-bgscr="{% static 'images/bg/long/1.jpg' %}" ><span>Register</span></a></li>
+     	     	     	<li><a  href="{% url 'user_login' %}" data-bgscr="{% static 'images/bg/long/1.jpg' %}" ><span>Login</span></a></li>
+     	     	     	{% endif %}
+		
+
+            
+  
+        </ul>
+    </nav>
+    <div class="arrowpagenav"></div>
+</div>

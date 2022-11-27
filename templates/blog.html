@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Main  -->
+        <div id="main">
+            <!-- header-->
+            {% include 'sidebar.html' %}
+            <!-- header end -->
+            <!-- wrapper -->
+            <div id="wrapper">
+                <!-- content-holder  -->	
+                <div class="content-holder scroll-content" data-pagetitle="Last News">
+                    <!-- nav-holder-->
+                    {% include 'navholder.html' %}
+                    <div class="nav-holder-dec color-bg"></div>
+                    <div class="nav-overlay"></div>
+                    <!-- nav-holder end -->    
+                    <!-- fixed-column-wrap -->       
+                    <div class="fixed-column-wrap">
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar color-bg"></div>
+                        </div>
+                        <div class="column-image fl-wrap full-height">
+                            <div class="bg"  data-bg="images/bg/long/1.jpg"></div>
+                            <div class="overlay"></div>
+                            <div class="column-image-anim"></div>
+                        </div>
+                        <div class="fcw-dec"></div>
+                        <div class="fixed-column-tilte fcw-title"><span>Last News</span></div>
+                    </div>
+                    <!-- fixed-column-wrap end -->
+                    <!-- column-wrap -->
+                    <div class="column-wrap  ">
+                        <!--content -->
+                        <div class="content">
+                            <!-- fixed-top-panel-->
+                            <div class="fixed-top-panel fl-wrap">
+                                <div class="sp-fix-header fl-wrap">
+                                    <div class="scroll-down-wrap hide_onmobile">
+                                        <div class="mousey">
+                                            <div class="scroller"></div>
+                                        </div>
+                                        <span>Scroll down  to discover</span>
+                                    </div>
+                                    <div class="search-btn"><i class="fal fa-search"></i><span>Search</span></div>
+                                    <!-- filter tag   -->
+                                    <div class="tag-filter blog-btn-filter">
+                                        <div class="blog-btn">Tags <i class="fa fa-tags" aria-hidden="true"></i></div>
+                                        <ul>
+                                            {% for i in tages %}
+                                            <li><a href="#">{{i.name}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <!-- filter tag end  -->
+                                    <!-- filter category    -->
+                                    <div class="category-filter blog-btn-filter">
+                                        <div class="blog-btn">Categories <i class="fa fa-list-ul" aria-hidden="true"></i></div>
+                                        <ul>
+                                            {% for i in cat %}
+                                            <li><a href="#">{{i.name}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <!-- filter category end  --> 
+                                </div>
+                                <div class="blog-search-wrap"><input name="se" id="se" type="text" class="search" placeholder="Type and click Enter to search.." value="" /></div>
+                            </div>
+                            <!-- fixed-top-panel end -->
+                            <!--section -->
+                            {% for i in blog %}
+                            <section   class="hidden-section article bot-element">
+                                <div class="col-wc_dec"></div>
+                                <div class="container">
+                                    <div class="section-title fl-wrap post-title">
+                                        <h3>{{i.titel}}</h3>
+                                        <div class="post-header"> <a href="#">{{i.date}}</a><span>Category : </span><a href="#">{{i.category}}</a> <a href="#">Video</a> </div>
+                                    </div>
+                                    <!-- media-wrap-->
+                                    <div class="media-wrap  lightgallery  fl-wrap">
+                                        <div class="single-slider-wrap">
+                                            <div class="single-slider fl-wrap">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper lightgallery">
+                                                        {% for i in i.blog_image_set.all %}
+                                                        <div class="swiper-slide hov_zoom"><img src="{{i.img.url}}" alt=""><a href="{{i.img.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                                        {% endfor %}
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="ss-slider-cont ss-slider-cont-prev  "><i class="fal fa-long-arrow-left"></i></div>
+                                                <div class="ss-slider-cont ss-slider-cont-next  "><i class="fal fa-long-arrow-right"></i></div>
+                                                <div class="ss-slider-controls">
+                                                    <div class="ss-slider-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- media-wrap end --> 
+                                    <div class="post-block fl-wrap">
+                                        <div class="post-opt fl-wrap">
+                                            <ul>
+                                                <li><a href="#"><i class="fal fa-user"></i> {{i.author_name}}</a></li>
+                                                <li><a href="#"><i class="fal fa-comments-alt"></i> 12 comments</a></li>
+                                                <li><span><i class="fal fa-eye"></i> 123 view</span></li>
+                                            </ul>
+                                        </div>
+                                        <p>{{i.desc}}
+                                        </p>
+                                        <p> 
+                                        </p>
+                                        <a href="{% url 'blog_detail' i.id %}" class="btn ajax  fl-btn color-bg">Read more</a>
+                                    </div>
+                                    <div class="sec-number">{{i.id}}</div>
+                                </div>
+                            </section>
+                            {% endfor %}
+                            <!--section end -->
+                            <div class="section-separator bot-element"><span class="fl-wrap"></span></div>
+                            
+                            <!--section end -->  
+                            <div class="section-separator bot-element"><span class="fl-wrap"></span></div>
+                            <!--pagination-->   
+                            <div class="pagination bot-element">
+                                <div class="pr-bg pr-bg-white"></div>
+                                <div class="container">
+                                    <a href="#" class="prevposts-link"><i class="fal fa-long-arrow-left"></i></a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="current-page">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="nextposts-link"><i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <!--pagination end-->                             
+                            <div class="limit-box fl-wrap"></div>
+                        </div>
+                    </div>
+                    <!--content  end -->
+                   {% endblock %}

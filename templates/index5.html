@@ -1,0 +1,511 @@
+{% extends 'base.html' %}
+{% load embed_video_tags %}
+{% load static %}
+{% block content %}
+       
+        <!-- Main  -->
+        <div id="main">
+            <!-- header-->
+            {% include 'sidebar.html' %}
+            <!-- header end -->
+            <!-- wrapper -->
+            <div id="wrapper">
+                <!-- content-holder  -->	
+                <div class="content-holder scroll-content" data-pagetitle="home video">
+                    <!-- nav-holder-->
+                    {% include 'navholder.html' %}
+                    <div class="nav-holder-dec color-bg"></div>
+                    <div class="nav-overlay"></div>
+                    <!-- nav-holder end -->            
+                    <!-- fixed-column-wrap --> 					
+                    <div class="fixed-column-wrap">
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar color-bg"></div>
+                        </div>
+                        <div class="column-image fl-wrap full-height">
+                            <div class="bg bg-scroll"  data-bg="{% static 'images/bg/long/1.jpg' %}"></div>
+                            <div class="overlay"></div>
+                            <div class="column-image-anim"></div>
+                        </div>
+                        <div class="fcw-dec"></div>
+                        <div class="fixed-column-tilte fdct fcw-title"><span  id="quote">About me</span></div>
+                    </div>
+                    <!-- fixed-column-wrap end-->
+                    <!-- hero-wrap--> 
+                    <div class="hero-wrap fl-wrap full-height scroll-con-sec hidden-section" id="sec1" data-scrollax-parent="true">
+                        <div class="media-container" data-scrollax="properties: { translateY: '30%' }">
+                            <div class="video-container">
+                                <video playsinline autoplay  loop muted  class="bgvid">
+                                    <!-- <source src="{% static 'video/2.mp4' %}" type="video/mp4"> -->
+                                </video>
+                            </div>
+                            <!--  
+                                Vimeo code
+                                
+                                 <div  class="background-vimeo" data-vim="97871257"> </div> --> 
+                             
+                                <!-- Youtube code  -->
+                                
+                                     <div  class="background-youtube-wrapper" data-vid="psi5C9WM3i0" data-mv="1"> </div>
+                                    
+                                 
+                                
+
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="half-hero-wrap">
+                            <div class="pr-bg"></div>
+                            <div class="rotate_text hero-decor-let">
+                                <div>Web Design</div>
+                                <div><span>Ui/Ux Design</span></div>
+                                <div>Branding</div>
+                                <div><span>Ecommerce</span></div>
+                            </div>
+                            <h1>Martin Kowalsky <br> Web <span>developer</span> and designer<br>   form <span>USA</span></h1>
+                            <h4>Praesent eu massa vel diam laoreet elementum ac sed felis. Donec suscipit ultricies risus sed mollis. Donec volutpat porta risus posuere imperdiet. </h4>
+                            <div class="clearfix"></div>
+                            <a href="#sec2" class="btn fl-btn custom-scroll-link  color-bg">View More Details</a>
+                        </div>
+                        <!-- hero  elements  --> 
+                        <div class="hero-border hb-top"></div>
+                        <div class="hero-border hb-bottom"></div>
+                        <div class="hero-border hb-right"></div>
+                        <div class="hero-corner hiddec-anim"></div>
+                        <div class="hero-corner2 hiddec-anim"></div>
+                        <div class="hero-corner3 hiddec-anim"></div>
+                        <div class="scroll-down-wrap sdw_hero hiddec-anim">
+                            <div class="mousey">
+                                <div class="scroller"></div>
+                            </div>
+                            <span>Scroll down  to discover</span>
+                        </div>
+                        <!-- hero  elements end--> 
+                    </div>
+                    <!-- hero-wrap end--> 
+                    <!-- column-wrap --> 
+                    <div class="column-wrap">
+                        <!--content -->
+                        <div class="content">
+                            <!--page-scroll-nav-->
+                            {% include 'nav.html' %}
+                            <!--page-scroll-nav end-->
+                            <!--section -->
+                            <section id="sec2" class="hidden-section scroll-con-sec bot-element">
+                                <div class="col-wc_dec"></div>
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>About me</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="dec-img   fl-wrap">
+                                                <img src="{% static 'images/about.jpg' %}" class="respimg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="main-about fl-wrap">
+                                                <h5>Curabitur convallis fringilla diam</h5>
+                                                <h2>Innovative solutions<br>to boost <span> your creative </span>  projects</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.</p>
+                                                <div class="dec-list fl-wrap">
+                                                    <ul>
+                                                        <li>Leverage agile frameworks to provide a robust synopsis.</li>
+                                                        <li>Iterative approaches to corporate strategy foster.</li>
+                                                        <li>Bring to the table win-win survival strategies.</li>
+                                                        <li>Scalable gun control breakthroughs social movement.</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="{% url 'prot' %}" class="btn ajax  fl-btn color-bg">My Portfolio</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec-number">01.</div>
+                                </div>
+                            </section>
+                            <!--section end -->
+                            
+                            <!--section -->
+                            <section class="dark-bg bot-element">
+                                <div class="container">
+                                    <div class="inline-facts-container fl-wrap">
+                                        <!-- inline-facts -->
+                                        <div class="inline-facts-wrap">
+                                            <div class="inline-facts">
+                                                <div class="milestone-counter">
+                                                    <div class="stats animaper">
+                                                        <div class="num" data-content="0" data-num="145">0</div>
+                                                    </div>
+                                                </div>
+                                                <h6>Finished projects</h6>
+                                            </div>
+                                        </div>
+                                        <!-- inline-facts end -->
+                                        <!-- inline-facts  -->
+                                        <div class="inline-facts-wrap">
+                                            <div class="inline-facts">
+                                                <div class="milestone-counter">
+                                                    <div class="stats animaper">
+                                                        <div class="num" data-content="0" data-num="357">0</div>
+                                                    </div>
+                                                </div>
+                                                <h6>Happy customers</h6>
+                                            </div>
+                                        </div>
+                                        <!-- inline-facts end -->
+                                        <!-- inline-facts  -->
+                                        <div class="inline-facts-wrap">
+                                            <div class="inline-facts">
+                                                <div class="milestone-counter">
+                                                    <div class="stats animaper">
+                                                        <div class="num" data-content="0" data-num="825">0</div>
+                                                    </div>
+                                                </div>
+                                                <h6>Working hours</h6>
+                                            </div>
+                                        </div>
+                                        <!-- inline-facts end -->
+                                        <!-- inline-facts  -->
+                                        <div class="inline-facts-wrap">
+                                            <div class="inline-facts">
+                                                <div class="milestone-counter">
+                                                    <div class="stats animaper">
+                                                        <div class="num" data-content="0" data-num="15">0</div>
+                                                    </div>
+                                                </div>
+                                                <h6>Awards won</h6>
+                                            </div>
+                                        </div>
+                                        <!-- inline-facts end --> 
+                                    </div>
+                                </div>
+                            </section>
+                            <!--section end -->
+                            <div class="section-separator bot-element"><span class="fl-wrap"></span></div>
+                            <!--section  --> 
+                            <section class="hidden-section scroll-con-sec bot-element" id="sec3">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>Services</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div class="cards-wrap fl-wrap">
+                                        <div class="row">
+                                            <!--card item --> 
+                                            {% for i in service %}
+                                            <div class="col-md-4">
+                                                <div class="content-inner fl-wrap">
+                                                    <div class="content-front">
+                                                        <div class="cf-inner">
+                                                            <div class="bg "  data-bg="{{i.img.url}}"></div>
+                                                            <div class="overlay"></div>
+                                                            <div class="inner">
+                                                                <h2>{{i.titel}}</h2>
+                                                                <ul>
+                                                                    <li>{{i.rol1}}</li>
+                                                                    <li>{{i.rol2}}</li>
+                                                                    <li>{{i.rol3}}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-back">
+                                                        <div class="cf-inner">
+                                                            <div class="inner">
+                                                                <div class="dec-icon">
+                                                                    <i class="fal fa-desktop"></i>
+                                                                </div>
+                                                                <p>{{i.desc}}</p>
+                                                                <div class="serv-price-wrap"><span>Price</span>{{i.price}}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                            <!--card item end -->
+                                                                                             
+                                        </div>
+                                        <div class="srv-link-text fl-wrap">
+                                            <h4>Ready to order your project ? Visit my contacts page :  </h4>
+                                            <a href="{% url 'contact' %}" class="btn float-btn ajax  color-bg">Contacts</a>
+                                        </div>
+                                    </div>
+                                    <div class="sec-number"  >02.</div>
+                                </div>
+                            </section>
+                            <!--section end -->
+                            <div class="section-separator"><span class="fl-wrap"></span></div>
+                            <!--section  -->
+                            <section class="hidden-section bot-element">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>Working Process</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <!--process-wrap  -->
+                                    <div class="process-wrap fl-wrap">
+                                        <ul>
+                                            <li>
+                                                <div class="time-line-icon">
+                                                    <i class="fab fa-slideshare"></i>
+                                                </div>
+                                                <h4>Discuss the project</h4>
+                                                <div class="process-details">
+                                                    <h6>Duis autem vel eum iriure dolor</h6>
+                                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+                                                </div>
+                                                <span class="process-numder">01.</span>
+                                            </li>
+                                            <li>
+                                                <div class="time-line-icon">
+                                                    <i class="fal fa-laptop"></i>
+                                                </div>
+                                                <h4>Develop & elaborate</h4>
+                                                <div class="process-details">
+                                                    <h6>In ut odio libero, at vulputate urna. </h6>
+                                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+                                                </div>
+                                                <span class="process-numder">02.</span>
+                                            </li>
+                                            <li>
+                                                <div class="time-line-icon">
+                                                    <i class="fal fa-flag-checkered"></i>
+                                                </div>
+                                                <h4>Final approvement</h4>
+                                                <div class="process-details">
+                                                    <h6>Nulla posuere sapien vitae lectus suscipit</h6>
+                                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+                                                </div>
+                                                <span class="process-numder">03.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--process-wrap   end-->                                       
+                                </div>
+                            </section>
+                            <!--section end -->
+                            <div class="section-separator bot-element"><span class="fl-wrap"></span></div>
+                            <!--section  -->    
+                            <section class="scroll-con-sec bot-element" id="sec4">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>My Skills</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="fl-wrap small-section-title">
+                                                <h3>Language Skills</h3>
+                                            </div>
+                                            <div class="piechart-holder animaper" data-skcolor="#F68338">
+                                                <!-- 1  -->
+                                                <div class="piechart">
+                                                    <span class="chart" data-percent="85">
+                                                    <span class="percent"></span>
+                                                    </span>
+                                                    <div class="clearfix"></div>
+                                                    <h4>French</h4>
+                                                </div>
+                                                <!-- 1 end -->
+                                                <!-- 2  -->
+                                                <div class="piechart">
+                                                    <span class="chart" data-percent="95">
+                                                    <span class="percent"></span>
+                                                    </span>
+                                                    <div class="clearfix"></div>
+                                                    <h4>Dutch</h4>
+                                                </div>
+                                                <!-- 2 end  -->
+                                                <!-- 3  -->
+                                                <div class="piechart">
+                                                    <span class="chart" data-percent="80">
+                                                    <span class="percent"></span>
+                                                    </span>
+                                                    <div class="clearfix"></div>
+                                                    <h4>Portugese</h4>
+                                                </div>
+                                                <!-- 3  end-->
+                                                <!-- 3  -->
+                                                <div class="piechart">
+                                                    <span class="chart" data-percent="70">
+                                                    <span class="percent"></span>
+                                                    </span>
+                                                    <div class="clearfix"></div>
+                                                    <h4>Russian</h4>
+                                                </div>
+                                                <!-- 3  end-->                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="fl-wrap small-section-title">
+                                                <h3>Developer Skills</h3>
+                                            </div>
+                                            <div class="skillbar-box animaper">
+                                                <div class="pr-bg pr-bg-white"></div>
+                                                <!-- skill 1-->
+                                                <div class="custom-skillbar-title"><span>Photoshop</span></div>
+                                                <div class="skill-bar-percent">95%</div>
+                                                <div class="skillbar-bg" data-percent="95%">
+                                                    <div class="custom-skillbar"></div>
+                                                </div>
+                                                <!-- skill 2-->
+                                                <div class="custom-skillbar-title"><span>HTML/Css</span></div>
+                                                <div class="skill-bar-percent">65%</div>
+                                                <div class="skillbar-bg" data-percent="65%">
+                                                    <div class="custom-skillbar"></div>
+                                                </div>
+                                                <!-- skill 3-->
+                                                <div class="custom-skillbar-title"><span>3D MAX</span></div>
+                                                <div class="skill-bar-percent">95%</div>
+                                                <div class="skillbar-bg" data-percent="95%">
+                                                    <div class="custom-skillbar"></div>
+                                                </div>
+                                                <!-- skill 4-->
+                                                <div class="custom-skillbar-title"><span>PHP</span></div>
+                                                <div class="skill-bar-percent">70%</div>
+                                                <div class="skillbar-bg" data-percent="70%">
+                                                    <div class="custom-skillbar"></div>
+                                                </div>
+                                                <!-- skill 5-->
+                                                <div class="custom-skillbar-title"><span>Javascript</span></div>
+                                                <div class="skill-bar-percent">60%</div>
+                                                <div class="skillbar-bg" data-percent="60%">
+                                                    <div class="custom-skillbar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec-number"  >03.</div>
+                                </div>
+                                <div class="col-wc_dec col-wc_dec2 col-wc_dec3"></div>
+                            </section>
+                            <!--section end -->                       
+                            <section class="dark-bg bot-element">
+                                <div class="container">
+                                    <div class="container">
+                                        <div class="row">
+                                            {% for vd in y_video %}
+                                            <div class="col-md-6">
+                                                
+                                                <div class="video-box dec-img fl-wrap">
+                                                    <img src="{{vd.img.url}}" alt="" class="respimg">
+                                                    <a class="video-box-btn image-popup" href="{{ vd.video_url }}"><i class="fas fa-play"></i></a>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="video-promo-text fl-wrap mar-top">
+                                                    <h3>{{vd.titel}} </h3>
+                                                    <p>{{vd.desc}} </p>
+                                                    <a href="{{vd.youtub_chanel_url}}" class="btn fl-btn    color-bg">My Youtube Chanel</a>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hero-corner"></div>
+                            </section>
+                            <!--section end -->
+                            <!--section  --> 
+                           
+                            <section class="hidden-section scroll-con-sec bot-element" id="sec5">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>Resume</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div class="custom-inner-holder">
+                                        <!-- 1 -->
+                                        {% for i in resume %}	
+                                        <div class="custom-inner">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="resum-header workres">
+                                                        <i class="fa fa-briefcase"></i>
+                                                        <h3> Work in company "{{i.company_name}}"</h3>
+                                                        <span>  {{i.st_end_year}} </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="resum-content fl-wrap">
+                                                        <h4>Complete the project "{{i.project_name}}"</h4>
+                                                        <p>{{i.desc}}</p>
+                                                        <div class="dec-list fl-wrap">
+                                                            <ul>
+                                                                <li>{{i.import_word1}}</li>
+                                                                <li>{{i.import_mord2}}</li>
+                                                                <li>{{i.import_word3}}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                        <!-- 1 -->
+                                        <!--2 -->	
+                                        <!-- 2 end -->
+                                    </div>
+                                    <div class="sec-number" >04.</div>
+                                </div>
+                            </section>
+                            <!--section end -->                      
+                            <div class="section-separator bot-element"><span class="fl-wrap"></span></div>
+                            <!--section  --> 
+                            <section class="hidden-section scroll-con-sec bot-element" id="sec6">
+                                <div class="container">
+                                    <div class="section-title fl-wrap">
+                                        <h3>Testimonials</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.  </p>
+                                    </div>
+                                    <div class="testimonilas-carousel-wrap fl-wrap">
+                                        <div class="tcb-wrap">
+                                            <div class="tcb  tcb-prev"><i class="fas fa-caret-left"></i></div>
+                                            <div class="tcb  tcb-next"><i class="fas fa-caret-right"></i></div>
+                                        </div>
+                                        <div class="testimonilas-carousel fl-wrap">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <!--testi-item-->
+                                                    {% for i in testimonials %}
+                                                    <div class="swiper-slide">
+                                                        <div class="testi-item fl-wrap">
+                                                            <div class="testi-avatar"><img src="{{i.img.url}}" alt=""></div>
+                                                            <span class="testi-number">{{i.id}}</span>
+                                                            <div class="testimonilas-text fl-wrap">
+                                                                <h3>{{i.name}}</h3>
+                                                                <p>"{{i.words}} "</p>
+                                                                <a href="{{i.fb_link}}" class="testi-link" target="_blank">Via Facebook</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {% endfor %}                                                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc-pagination"></div>
+                                    </div>
+                                    <!-- client-list -->
+                                    <div class="fl-wrap">
+                                        <div class="container">
+                                            <ul class="client-list client-list-white">
+                                                {% for i in logos %}
+                                                <li><a href="#" target="_blank"><img src="{{i.img.url}}" alt=""></a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                        <!-- client-list end-->
+                                    </div>
+                                    <div class="sec-number" >05.</div>
+                                </div>
+                                <div class="col-wc_dec col-wc_dec2"></div>
+                            </section>
+                            <!--section end -->
+                            <div class="limit-box fl-wrap"></div>
+                        </div>
+                    </div>
+                    <!--content  end -->
+
+                 {% endblock %}
